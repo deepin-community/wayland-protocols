@@ -1,8 +1,29 @@
-wayland-protocols (1.25-1) UNRELEASED; urgency=medium
+wayland-protocols (1.31-1) unstable; urgency=medium
 
-  * update
+  * New upstream release.
 
- -- Debian X Strike Force <debian-x@lists.debian.org>  Wed, 18 May 2022 09:31:45 +0800
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 13 Jan 2023 16:04:57 +0200
+
+wayland-protocols (1.27-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 13.
+  * Set debhelper-compat version in Build-Depends.
+  * Re-export upstream signing key without extra signatures.
+  * Update standards version to 4.6.0, no changes needed.
+
+  [ Héctor Orón Martínez ]
+  * New upstream release
+  * debian/watch: update to new upstream release site
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Fri, 14 Oct 2022 18:14:50 +0200
+
+wayland-protocols (1.26-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control: update meson build depends version
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Fri, 08 Jul 2022 17:57:10 +0200
 
 wayland-protocols (1.25-1) unstable; urgency=medium
 
