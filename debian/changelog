@@ -1,3 +1,10 @@
+wayland-protocols (1.36-1deepin1) unstable; urgency=medium
+
+  * HACK: Disable tests as it is broken on loong64 (and is still unresolved)
+  * Ref: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/issues/48
+
+ -- Mingcong Bai <baimingcong@uniontech.com>  Tue, 04 Jun 2024 11:53:29 +0800
+
 wayland-protocols (1.36-1) unstable; urgency=medium
 
   * Team upload.
