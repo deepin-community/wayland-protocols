@@ -18,14 +18,16 @@ variables:
 
 workflow:
   rules:
-    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
-    - if: $CI_PIPELINE_SOURCE == 'push'
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
 
 .debian:
   variables:
     FDO_DISTRIBUTION_VERSION: bookworm
     FDO_DISTRIBUTION_PACKAGES: 'build-essential pkg-config meson git ca-certificates libffi-dev libexpat1-dev libxml2-dev'
-    FDO_DISTRIBUTION_TAG: '2023-12-27.0'
+    FDO_DISTRIBUTION_TAG: '2024-09-05.0'
     FDO_DISTRIBUTION_EXEC: 'env FDO_CI_CONCURRENT=${FDO_CI_CONCURRENT} ./.gitlab-ci/debian-install.sh'
 
 check-commit:
