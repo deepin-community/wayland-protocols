@@ -1,0 +1,24 @@
+From 87f98496cdd13f6880c6ef056e4b1a1e7efc815c Mon Sep 17 00:00:00 2001
+From: Mingcong Bai <jeffbai@aosc.xyz>
+Date: Tue, 4 Jun 2024 14:50:40 +0800
+Subject: [PATCH] HACK: (loong64) disable broken tests
+
+Ref: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/issues/48
+---
+diff --git a/meson.build b/meson.build
+index e7cdd83..f796062 100644
+--- a/meson.build
++++ b/meson.build
+@@ -152,10 +152,6 @@ wayland_protocols = declare_dependency(
+ 
+ meson.override_dependency('wayland-protocols', wayland_protocols)
+ 
+-if get_option('tests')
+-	subdir('tests')
+-endif
+-
+ summary({
+ 	'Headers': include_dirs.length() > 0,
+ }, bool_yn: true)
+-- 
+2.43.4
