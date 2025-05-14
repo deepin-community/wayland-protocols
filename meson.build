@@ -1,5 +1,5 @@
 project('wayland-protocols',
-	version: '1.38',
+	version: '1.44',
 	meson_version: '>= 0.58.0',
 	license: 'MIT/Expat',
 )
@@ -8,15 +8,19 @@ wayland_protocols_version = meson.project_version()
 
 fs = import('fs')
 
-dep_scanner = dependency('wayland-scanner', version: '>=1.20.0', native: true, fallback: 'wayland')
+dep_scanner = dependency('wayland-scanner',
+    version: get_option('tests') ? '>=1.23.0' : '>=1.20.0',
+    native: true,
+    fallback: 'wayland'
+)
 prog_scanner = find_program(dep_scanner.get_variable(pkgconfig: 'wayland_scanner', internal: 'wayland_scanner'))
 
 stable_protocols = {
+	'linux-dmabuf': ['v1'],
 	'presentation-time': [''],
+	'tablet': ['v2'],
 	'viewporter': [''],
 	'xdg-shell': [''],
-	'linux-dmabuf': ['v1'],
-	'tablet': ['v2'],
 }
 
 unstable_protocols = {
@@ -41,16 +45,21 @@ unstable_protocols = {
 }
 
 staging_protocols = {
+	'alpha-modifier': ['v1'],
+	'color-management': ['v1'],
+	'color-representation': ['v1'],
 	'commit-timing': ['v1'],
 	'content-type': ['v1'],
 	'cursor-shape': ['v1'],
 	'drm-lease': ['v1'],
+	'ext-data-control': ['v1'],
 	'ext-foreign-toplevel-list': ['v1'],
 	'ext-idle-notify': ['v1'],
 	'ext-image-capture-source': ['v1'],
 	'ext-image-copy-capture': ['v1'],
 	'ext-session-lock': ['v1'],
 	'ext-transient-seat': ['v1'],
+	'ext-workspace': ['v1'],
 	'fifo': ['v1'],
 	'fractional-scale': ['v1'],
 	'linux-drm-syncobj': ['v1'],
@@ -62,8 +71,8 @@ staging_protocols = {
 	'xdg-system-bell': ['v1'],
 	'xdg-toplevel-drag': ['v1'],
 	'xdg-toplevel-icon': ['v1'],
+	'xdg-toplevel-tag': ['v1'],
 	'xwayland-shell': ['v1'],
-	'alpha-modifier': ['v1'],
 }
 
 protocol_files = []

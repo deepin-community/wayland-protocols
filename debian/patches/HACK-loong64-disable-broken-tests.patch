@@ -9,7 +9,7 @@ diff --git a/meson.build b/meson.build
 index e7cdd83..f796062 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -152,10 +152,6 @@ wayland_protocols = declare_dependency(
+@@ -161,10 +161,6 @@ wayland_protocols = declare_dependency(
  
  meson.override_dependency('wayland-protocols', wayland_protocols)
  
