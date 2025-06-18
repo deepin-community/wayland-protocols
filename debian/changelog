@@ -1,8 +1,54 @@
-wayland-protocols (1.38-1deepin1) unstable; urgency=medium
+wayland-protocols (1.44-1) unstable; urgency=medium
 
-  * Fix loong64 build
+  * New upstream release.
 
- -- xiangzelong <xiangzelong@deepin.org>  Thu, 05 Dec 2024 15:55:14 +0800
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 28 Apr 2025 11:01:57 +0200
+
+wayland-protocols (1.43-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dylan Aïssi <daissi@debian.org>  Wed, 09 Apr 2025 18:15:11 +0200
+
+wayland-protocols (1.42-2) unstable; urgency=medium
+
+  * Mark autopkgtest as flaky for now.
+
+ -- Dylan Aïssi <daissi@debian.org>  Wed, 26 Mar 2025 17:47:03 +0100
+
+wayland-protocols (1.42-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add autopkgtest
+  * Add debian/salsa-ci.yml
+  * Use httpS for Homepage
+  * wrap-and-sort -a
+  * Update standards version to 4.7.0, no changes needed
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 24 Mar 2025 17:39:31 +0100
+
+wayland-protocols (1.41-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #1096197, LP: #1844775)
+  * debian/watch: rely on gitlab releases instead of releases.html
+      which tends to be outdated.
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 17 Feb 2025 18:05:14 +0100
+
+wayland-protocols (1.40-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control: build depends on libwayland-dev >= 1.23.0.
+  * Add myself to Uploaders
+
+ -- Dylan Aïssi <daissi@debian.org>  Mon, 03 Feb 2025 17:15:18 +0100
+
+wayland-protocols (1.39-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Dylan Aïssi <daissi@debian.org>  Fri, 27 Dec 2024 15:13:54 +0100
 
 wayland-protocols (1.38-1) unstable; urgency=medium
 
